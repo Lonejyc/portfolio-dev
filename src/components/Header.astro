@@ -1,0 +1,88 @@
+---
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+/** Main menu items */
+const textLinks: { label: string; href: string }[] = [
+	{ label: 'À propos de moi', href: '#aboutme' },
+	{ label: 'Mon alternance', href: '#org' },
+	{ label: 'Mes projets', href: '#projects' },
+];
+---
+<header>
+	<nav class="navbar">
+		<div class="header-left">
+			<a href="/" class="logo">
+				<span class="text-lg font-semibold">Jocelyn Marcilloux-Buisson</span>
+			</a>
+		</div>
+		<div class="header-right" >
+			<!-- <ThemeToggle /> -->
+			<ul class="nav_links">
+				{
+					textLinks.map(({ label, href }) => (
+						<li class="nav_link">
+							<a
+								aria-current={Astro.url.pathname === href}
+								class:list={[
+									'link',
+									{
+										active:
+										Astro.url.pathname === href ||
+										(href !== '/' && Astro.url.pathname.startsWith(href)),
+									},
+								]}
+								href={href}
+								>
+								{label}
+							</a>
+						</li>
+						))
+					}
+			</ul>
+		</div>
+		<button class="burger">
+			<span class="line"></span>
+		</button>
+	</nav>
+</header>
+<script>
+	gsap.registerPlugin(ScrollTrigger);
+	
+	let tl = gsap.timeline({
+		scrollTrigger: {
+			trigger: '.navbar',
+			start: 'top 80%',
+			end: 'bottom 20%',
+			toggleActions: 'play none none none'
+		}
+	});
+
+	tl.from('.logo', { opacity: 0, y: 100, duration: 1, ease: 'power2.out'});
+	if (window.innerWidth > 768) {
+		tl.from('.header-right', { opacity: 0, y: 100, duration: 1, ease: 'power2.out'}, '-=0.8');
+	}
+	tl.from('.burger', { opacity: 0, y: 100, duration: 1, ease: 'power2.out'}, '-=1');
+
+
+	function toggleMenu() {
+		const nav = document.querySelector('.navbar');
+		const burger = document.querySelector('.burger');
+		const navLink = document.querySelectorAll('.nav_link a');
+
+		if (burger) {
+			burger.addEventListener('click', () => {
+				if (nav) {
+					nav.classList.toggle('show_nav');
+				}
+			});
+		}
+		navLink.forEach((link) => {
+			link.addEventListener('click', () => {
+				if (nav) {
+					nav.classList.remove('show_nav');
+				}
+			});
+		});
+	}
+	toggleMenu();
+</script>
