@@ -1,0 +1,24 @@
+---
+import arrow from '../../public/images/arrow.svg';
+---
+<div class="hero px-4 md:px-8 flex flex-col justify-between gap-8 h-svh">
+    <div class="title py-8">
+        <h1 class="text-8xl">Portfolio</h1>
+        <h1 class="text-8xl">Développeur web</h1>
+    </div>
+    <div class="arrow bg-black rounded-full w-fit p-5">
+        <img src={arrow.src} alt="Flèche vers la droite">
+    </div>
+    <div class="horizontal-line"></div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const header = document.querySelector('header');
+        const hero = document.querySelector('.hero');
+        //get the height of the header
+        const headerHeight = header.offsetHeight;
+        //set the height of the hero to the height of the viewport minus the height of the header
+        hero.style.height = `calc(100vh - ${headerHeight}px)`;
+    });
+</script>

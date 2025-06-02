@@ -41,5 +41,16 @@
 }
 
 p, li, a {
-    font-family: Poppins, sans-serif;
+  font-family: Poppins, sans-serif;
 }
+
+h1, h2, h3 {
+  font-family: Sentient-Bold, sans-serif;
+}
+
+.horizontal-line {
+		width: 100%;
+		height: 1px;
+		background-color: black;
+		margin: 0 auto;
+	}
