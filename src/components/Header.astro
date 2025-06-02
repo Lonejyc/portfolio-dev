@@ -1,25 +1,22 @@
 ---
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-/** Main menu items */
 const textLinks: { label: string; href: string }[] = [
 	{ label: 'À propos de moi', href: '#aboutme' },
 	{ label: 'Mon alternance', href: '#org' },
 	{ label: 'Mes projets', href: '#projects' },
 ];
 ---
-<header>
-	<nav class="navbar">
-		<div class="header-left">
+<header class="px-4 md:px-8">
+	<nav class="navbar flex justify-between py-8 text-xl">
+		<div class="header-left flex">
 			<a href="/" class="logo">
-				<span class="text-lg font-semibold">Jocelyn Marcilloux-Buisson</span>
+				<span class="text-lg font-['Sentient-Bold']">Jocelyn Marcilloux-Buisson</span>
 			</a>
 		</div>
-		<div class="header-right" >
+		<div class="header-right flex my-auto">
 			<!-- <ThemeToggle /> -->
 			<ul class="nav_links">
 				{
-					textLinks.map(({ label, href }) => (
+					textLinks.map(({ label, href }, index) => (
 						<li class="nav_link">
 							<a
 								aria-current={Astro.url.pathname === href}
@@ -44,8 +41,173 @@ const textLinks: { label: string; href: string }[] = [
 			<span class="line"></span>
 		</button>
 	</nav>
+	<div class="horizontal-line"></div>
 </header>
+
+<style>
+	.horizontal-line {
+		width: 100%;
+		height: 1px;
+		background-color: black;
+		margin: 0 auto;
+	}
+
+	@media (min-width: 768px) {
+		.nav_links {
+			display: flex;
+			gap: 36px;
+		}
+		
+		.nav_link a {
+			position: relative;
+			display: inline-block;
+		}
+		
+		.nav_link a::after {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 1px;
+			margin-top: 4px;
+			background-color: black;
+			transform: scaleX(0);
+			transform-origin: bottom right;
+			transition: transform 0.25s ease-in-out;
+		}
+		
+		.nav_link:hover a::after {
+			transform: scaleX(1);
+			transform-origin: bottom left;
+		}
+		
+		.burger {
+			display: none;
+		}
+	}
+	
+	/* Mobile styles */
+	@media (max-width: 767.98px) {
+		.nav_links {
+			position: fixed;
+			top: 0;
+			right: 0;
+			width: 0;
+			height: 100vh;
+			display: flex;
+			flex-direction: column;
+			background-color: black;
+			overflow-x: hidden;
+			transition: width 0.5s ease-in-out;
+			z-index: 1;
+		}
+		
+		.nav_link {
+			transform: translateX(101%);
+			margin: 10px;
+		}
+		
+		.nav_link:first-child {
+			margin-top: 80px;
+		}
+		
+		.nav_link a {
+			display: block;
+			padding: 1rem;
+			font-size: 1.5rem;
+			color: white;
+			transition: all 0.4s ease-in-out;
+		}
+		
+		.nav_link a:hover {
+			letter-spacing: 4px;
+			padding-left: 1.6rem;
+		}
+		
+		.burger {
+			display: block;
+			position: relative;
+			width: 48px;
+			height: 48px;
+			margin-right: 32px;
+			padding: 0;
+			background: transparent;
+			border: none;
+			cursor: pointer;
+			z-index: 2;
+		}
+		
+		.line {
+			display: block;
+			width: 48px;
+			height: 4px;
+			background-color: black;
+			border-radius: 2px;
+			transition: all 0.5s ease-in-out;
+		}
+		
+		.line::before,
+		.line::after {
+			content: "";
+			position: absolute;
+			left: 0;
+			width: 48px;
+			height: 4px;
+			background-color: black;
+			border-radius: 2px;
+			transition: all 0.5s ease-in-out;
+		}
+		
+		.line::before {
+			transform: translateY(-12px);
+		}
+		
+		.line::after {
+			transform: translateY(12px);
+		}
+		
+		/* Show nav state */
+		.navbar.show_nav .nav_links {
+			width: 100vw;
+		}
+		
+		.navbar.show_nav .nav_link {
+			transform: translateX(0);
+		}
+		
+		.navbar.show_nav .nav_link:nth-child(1) {
+			transition: all 1s ease-out;
+		}
+		
+		.navbar.show_nav .nav_link:nth-child(2) {
+			transition: all 1.1s ease-out;
+		}
+		
+		.navbar.show_nav .nav_link:nth-child(3) {
+			transition: all 1.2s ease-out;
+		}
+		
+		.navbar.show_nav .burger .line {
+			width: 0;
+			background-color: transparent;
+		}
+		
+		.navbar.show_nav .burger .line::before {
+			transform: rotate(45deg);
+			background-color: white;
+		}
+		
+		.navbar.show_nav .burger .line::after {
+			transform: rotate(-45deg);
+			background-color: white;
+		}
+	}
+</style>
+
 <script>
+	import { gsap } from 'gsap';
+	import { ScrollTrigger } from 'gsap/ScrollTrigger';
 	gsap.registerPlugin(ScrollTrigger);
 	
 	let tl = gsap.timeline({
@@ -62,7 +224,6 @@ const textLinks: { label: string; href: string }[] = [
 		tl.from('.header-right', { opacity: 0, y: 100, duration: 1, ease: 'power2.out'}, '-=0.8');
 	}
 	tl.from('.burger', { opacity: 0, y: 100, duration: 1, ease: 'power2.out'}, '-=1');
-
 
 	function toggleMenu() {
 		const nav = document.querySelector('.navbar');
