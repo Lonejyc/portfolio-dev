@@ -10,7 +10,7 @@ interface Props {
 const { title, isReverse } = Astro.props as Props;
 ---
 <section id={Astro.props.id} class={cn(
-    'flex items-center justify-between px-4 md:px-8 py-4 md:py-8 h-screen',
+    'flex items-center justify-between px-4 md:px-8 py-4 md:py-8 h-full',
     isReverse ? 'flex-row-reverse' : 'flex-row',
     )}>
     <div class={cn(
