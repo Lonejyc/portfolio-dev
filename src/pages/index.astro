@@ -4,6 +4,7 @@ import { getCollection } from 'astro:content';
 import '../styles/global.css';
 
 import myPicture from '../assets/photo-moi.jpeg';
+import MyRole from '../assets/logoMyRole.svg';
 
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
@@ -53,6 +54,45 @@ const competencies: { label: string }[] = [
                     </div>
                 </div>
             </div>
-        </SectionTitle>    
+        </SectionTitle>
+        <div class="px-4 md:px-8">
+            <div class="horizontal-line"></div>
+        </div>
+        <SectionTitle title="Mon alternance" id="myrole" isReverse>
+            <div class="flex flex-col gap-8 md:gap-16 px-4 md:px-8">
+                <div class="flex flex-col justify-between gap-8">
+                    <h3>L'entreprise</h3>
+                    <div class="flex justify-between items-center gap-4">
+                        <img src={MyRole.src} alt="Logo de MyRole" class="w-1/2 p-8">
+                        <div class="vertical-line"></div>
+                        <p class="w-1/2 p-8">
+                            Startup née en 2015 - automatise et accélère les tâches redondantes liées à la gestion administrative des acteurs sur les tournages de films
+                        </p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 items-center text-center gap-8 px-8 lg:px-32">
+                    <div class="flex flex-col gap-4">
+                        <span class="text-5xl font-['Sentient-Bold']">780</span>
+                        <p class="px-4 lg:px-8">Projets de longs-métrages, séries et fictions TV</p>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <span class="text-5xl font-['Sentient-Bold']">370</span>
+                        <p class="px-4 lg:px-8">Société de production clientes</p>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <span class="text-5xl font-['Sentient-Bold']">120 000</span>
+                        <p class="px-4 lg:px-8">Utilisateurs</p>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <span class="text-5xl font-['Sentient-Bold']">400 000</span>
+                        <p class="px-4 lg:px-8">Fichiers de paie hébergés</p>
+                    </div>
+                </div>
+                <div class="horizontal-line"></div>
+                <div>
+
+                </div>
+            </div>
+        </SectionTitle>
     </main>
 </Layout>
