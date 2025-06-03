@@ -6,9 +6,17 @@ import '../styles/global.css';
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
+import SectionTitle from '../components/SectionTitle.astro';
 ---
 
 <Layout>
     <Header/>
     <Hero/>
+    <main>
+        <SectionTitle title="Qui suis-je ?" id="about">
+            <p>
+                Je suis développeur web passionné par la création d'applications et de sites web modernes. J'aime explorer de nouvelles technologies et partager mes connaissances avec la communauté.
+            </p>
+        </SectionTitle>    
+    </main>
 </Layout>
