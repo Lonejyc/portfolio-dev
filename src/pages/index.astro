@@ -5,6 +5,7 @@ import '../styles/global.css';
 
 import myPicture from '../assets/photo-moi.jpeg';
 import MyRole from '../assets/logoMyRole.svg';
+import arrowInverted from '../assets/arrow-inverted.svg';
 
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
@@ -70,7 +71,7 @@ const competencies: { label: string }[] = [
                         </p>
                     </div>
                 </div>
-                <div class="grid grid-cols-2 items-center text-center gap-8 px-8 lg:px-32">
+                <div class="grid grid-cols-2 items-center text-center gap-8 px-8 lg:px-16 xl:px-32">
                     <div class="flex flex-col gap-4">
                         <span class="text-5xl font-['Sentient-Bold']">780</span>
                         <p class="px-4 lg:px-8">Projets de longs-métrages, séries et fictions TV</p>
@@ -89,10 +90,45 @@ const competencies: { label: string }[] = [
                     </div>
                 </div>
                 <div class="horizontal-line"></div>
-                <div>
-
+                <div class="flex flex-col gap-8">
+                    <div class="flex gap-8">
+                        <h3>Mon rôle</h3>
+                        <div class="flex gap-4 items-center">
+                            <Pill>18 novembre 2024</Pill>
+                            <img src={arrowInverted.src} alt="Flèche vers la droite" class="w-8 h-8">
+                            <Pill>18 novembre 2024</Pill>
+                        </div>
+                    </div>
+                    <ul class="arrow-list flex flex-col gap-4">
+                        <li>Intégration de contrats au format TWIG</li>
+                        <li>Mise en place de procédures + cahier des charges pour une fonctionnalité d'intégration automatique</li>
+                        <li>Développement de la V3 de la web application (Symfony, API platform, React,...)</li>
+                        <li>Support utilisateur et agent de formation</li>
+                    </ul>
                 </div>
             </div>
         </SectionTitle>
     </main>
 </Layout>
+
+<style>
+    .arrow-list li {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+        padding-inline-start: 0;
+    }
+    .arrow-list li::before {
+        content: '';
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        background-image: url('../assets/arrow-inverted.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-right: 0.5rem;
+        flex-shrink: 0;
+    }
+</style>
