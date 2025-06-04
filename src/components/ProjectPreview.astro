@@ -1,0 +1,26 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+	project: CollectionEntry<'mmi' | 'myrole' | 'perso'>;
+}
+
+const { data, slug } = Astro.props.project;
+
+import Pill from './Pill.astro';
+---
+<li class="card">
+	<div class="background"></div>
+	<a href={`/work/${slug}`}>
+		<div class="img">
+			<img src={data.img} alt={data.img_alt || ''} loading="lazy" decoding="async" />
+		</div>
+		<div class="content">
+			<h3 class="title">{data.title}</h3>
+			<p class="description">{data.description}</p>
+			<ul class="tags">
+				{data.support.map((s) => <li><Pill invert>{s}</Pill></li>)}
+			</ul>
+		</div>
+	</a>
+</li>

@@ -12,6 +12,7 @@ import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
 import SectionTitle from '../components/SectionTitle.astro';
 import Pill from '../components/Pill.astro';
+import ProjectPreview from '../components/ProjectPreview.astro';
 
 const competencies: { label: string }[] = [
 	{ label: 'React' },
@@ -22,6 +23,16 @@ const competencies: { label: string }[] = [
     { label: 'Git' },
     { label: 'Coolify' },
 ];
+
+const projectsMmi = (await getCollection('mmi')).slice(0, 3);
+const projectsMyrole = (await getCollection('myrole')).slice(0, 3);
+const projectPerso = (await getCollection('perso')).slice(0, 3);
+
+console.log('all projects', {
+    projectsMmi,
+    projectsMyrole,
+    projectPerso
+});
 ---
 <Layout>
     <Header/>
@@ -107,6 +118,21 @@ const competencies: { label: string }[] = [
                     </ul>
                 </div>
             </div>
+        </SectionTitle>
+        <div class="px-4 md:px-8">
+            <div class="horizontal-line"></div>
+        </div>
+        <SectionTitle title="Mes projets" id="projects">
+            {projectsMyrole.length > 0 && (
+                <div class="flex flex-col gap-8 md:gap-16 px-4 md:px-8">
+                    <h3>Entreprise</h3>
+                    <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {projectsMyrole.map((project) => (
+                            <ProjectPreview project={project} />
+                        ))}
+                    </ul>
+                </div>
+            )}
         </SectionTitle>
     </main>
 </Layout>
