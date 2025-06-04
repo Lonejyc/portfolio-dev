@@ -1,3 +1,14 @@
-<span class="px-4 py-2 w-fit rounded-full border border-black text-2xl font-['Poppins']">
+---
+import cn from 'mxcn';
+
+interface Props {
+  invert?: boolean;
+}
+
+const { invert } = Astro.props as Props;
+---
+
+<span class={cn("px-4 py-2 w-fit rounded-full border border-black text-2xl font-['Poppins']", {
+    'bg-black text-white': invert})}>
     <slot />
 </span>
