@@ -3,7 +3,7 @@ import { getCollection } from 'astro:content';
 
 import '../styles/global.css';
 
-import myPicture from '../assets/photo-moi.jpeg';
+import myPicture from '../assets/photo-moi.webp';
 import MyRole from '../assets/logoMyRole.svg';
 import arrowInverted from '../assets/arrow-inverted.svg';
 
@@ -126,9 +126,9 @@ console.log('all projects', {
             {projectsMyrole.length > 0 && (
                 <div class="flex flex-col gap-8 md:gap-16 px-4 md:px-8">
                     <h3>Entreprise</h3>
-                    <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {projectsMyrole.map((project) => (
-                            <ProjectPreview project={project} />
+                    <ul class="flex flex-col">
+                        {projectsMyrole.map((project, index) => (
+                            <ProjectPreview project={project} index={index + 1} />
                         ))}
                     </ul>
                 </div>
@@ -158,46 +158,3 @@ console.log('all projects', {
         flex-shrink: 0;
     }
 </style>
-
-<script>
-    import { gsap } from 'gsap';
-    import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-    gsap.registerPlugin(ScrollTrigger);
-
-    // Animate each .horizontal-line individually
-    document.querySelectorAll('.horizontal-line').forEach((el) => {
-        gsap.fromTo(
-            el,
-            { scaleX: 0 },
-            {
-                scaleX: 1,
-                duration: 2,
-                ease: "power2.inOut",
-                scrollTrigger: {
-                    trigger: el,
-                    start: "top 90%",
-                    toggleActions: "play none none none",
-                }
-            }
-        );
-    });
-
-    // Animate each .vertical-line individually
-    document.querySelectorAll('.vertical-line').forEach((el) => {
-        gsap.fromTo(
-            el,
-            { scaleY: 0 },
-            {
-                scaleY: 1,
-                duration: 2,
-                ease: "power2.inOut",
-                scrollTrigger: {
-                    trigger: el,
-                    start: "top 90%",
-                    toggleActions: "play none none none",
-                }
-            }
-        );
-    });
-</script>
