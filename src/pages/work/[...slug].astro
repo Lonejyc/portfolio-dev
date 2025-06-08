@@ -1,0 +1,194 @@
+---
+import { type CollectionEntry, getCollection } from 'astro:content';
+
+import '../../styles/global.css';
+
+import Layout from '../../layouts/Layout.astro';
+import Icon from '../../components/Icon.astro';
+import Pill from '../../components/Pill.astro';
+
+interface Props {
+	entry: CollectionEntry<'mmi' | 'myrole' | 'perso'>;
+}
+
+export async function getStaticPaths() {
+	const mmi = await getCollection('mmi');
+	const myrole = await getCollection('myrole');
+	const perso = await getCollection('perso');
+	return [
+		...mmi.map((entry) => ({
+			params: { slug: entry.slug },
+			props: { entry },
+		})),
+		...myrole.map((entry) => ({
+			params: { slug: entry.slug },
+			props: { entry },
+		})),
+		...perso.map((entry) => ({
+			params: { slug: entry.slug },
+			props: { entry },
+		})),
+	];
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+<Layout>
+	<div class="projects relative min-h-screen">
+		<!-- Bouton retour fixe en haut -->
+		<div class="fixed top-8 left-8 z-10">
+			<a class="back-link flex items-center gap-2 text-sm hover:opacity-80 transition-opacity" href="/#projects">
+				<Icon icon="arrow-left" />
+				<span>Return</span>
+			</a>
+		</div>
+
+		<!-- Container principal avec grid -->
+		<div class="grid grid-cols-1 gap-0 min-h-screen">
+			
+			<!-- Contenu principal (scrollable) -->
+			<main class="px-8 lg:px-16 py-20 lg:py-24 overflow-y-auto">
+				<div class="max-w-3xl mx-auto">
+					<!-- Titre -->
+					<h1 class="text-5xl lg:text-6xl font-bold mb-12 lg:mb-16">
+						{entry.data.title}
+					</h1>
+					
+					<!-- Contenu -->
+					<div class="prose prose-lg max-w-none">
+						<Content />
+					</div>
+					
+					<!-- Images si présentes -->
+					{entry.data.img && (
+						<div class="mt-12">
+							<img 
+								src={entry.data.img} 
+								alt={entry.data.img_alt || ''} 
+								class="w-full rounded-lg"
+							/>
+						</div>
+					)}
+				</div>
+			</main>
+
+			<!-- Sidebar fixe à droite -->
+			<aside class="hidden lg:block fixed right-0 top-0 max-w-[500px] w-auto h-full p-12 overflow-y-auto">
+				<div class="sticky top-0 flex flex-col gap-12">
+					<!-- Section Compétences -->
+					<div class="mb-12">
+						<h3 class="text-3xl font-bold mb-6">Compétences</h3>
+						<div class="flex flex-wrap gap-3">
+							{entry.data.support.map((s) => (
+								<Pill invert>{s}</Pill>
+							))}
+						</div>
+					</div>
+					<div class="horizontal-line"></div>
+					<!-- Section Apprentissage Critique -->
+					<div>
+						<h2 class="text-3xl font-bold mb-6">Apprentissage Critique</h2>
+						<div class="flex flex-wrap gap-3">
+							{entry.data.competencies.map((ac) => (
+								<Pill>{ac}</Pill>
+							))}
+						</div>
+					</div>
+				</div>
+			</aside>
+
+			<!-- Version mobile de la sidebar (en bas du contenu) -->
+			<div class="lg:hidden px-8 py-12">
+				<!-- Section Compétences -->
+				<div class="mb-8">
+					<h2 class="text-2xl font-bold mb-4">Compétences</h2>
+					<div class="flex flex-wrap gap-2">
+						{entry.data.support.map((s) => (
+							<Pill invert>{s}</Pill>
+						))}
+					</div>
+				</div>
+
+				<!-- Section Apprentissage Critique -->
+				<div>
+					<h2 class="text-2xl font-bold mb-4">Apprentissage Critique</h2>
+					<div class="flex flex-wrap gap-2">
+						{entry.data.competencies.map((ac) => (
+							<Pill>{ac}</Pill>
+						))}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</Layout>
+
+<style>
+	/* Style pour la prose/contenu */
+	.prose {
+		color: inherit;
+	}
+	
+	.prose p {
+		margin-bottom: 1.5rem;
+		line-height: 1.8;
+	}
+	
+	.prose ul {
+		list-style-type: disc;
+		padding-left: 1.5rem;
+		margin-bottom: 1.5rem;
+	}
+	
+	.prose li {
+		margin-bottom: 0.5rem;
+	}
+	
+	.prose strong {
+		font-weight: 600;
+	}
+	
+	/* Ajustements pour la sidebar fixe */
+	@media (min-width: 1024px) {
+		main {
+			margin-right: 400px;
+		}
+	}
+	
+	/* Style pour le bouton retour */
+	.back-link {
+		padding: 0.5rem 1rem;
+		background: rgba(255, 255, 255, 0.9);
+		backdrop-filter: blur(10px);
+		border-radius: 0.5rem;
+		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+		transition: all 0.2s;
+	}
+	
+	.back-link:hover {
+		transform: translateX(-4px);
+	}
+
+	.projects > li {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+        padding-inline-start: 0;
+    }
+    
+	.projects > li::before {
+        content: '';
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        background-image: url('../assets/arrow-inverted.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-right: 0.5rem;
+        flex-shrink: 0;
+    }
+</style>
