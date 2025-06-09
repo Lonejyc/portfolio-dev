@@ -91,3 +91,43 @@ body {
   background-color: black;
   transform-origin: top;
 }
+
+.prose {
+		color: inherit;
+	}
+	
+	.prose p {
+		margin-bottom: 1.5rem;
+		line-height: 1.8;
+	}
+	
+	.prose ul li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    padding-inline-start: 0;
+    margin-bottom: 1em;
+  }
+
+	.prose ul li::before {
+		content: '';
+		display: inline-block;
+		width: 28px;
+		height: 28px;
+		background-image: url('../assets/arrow-inverted.svg');
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		margin-right: 0.5rem;
+		flex-shrink: 0;
+	}
+
+  .prose ol {
+    list-style: decimal;
+    padding-left: 1.5rem;
+  }
+	
+	.prose strong {
+		font-weight: 600;
+	}
