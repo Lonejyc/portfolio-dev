@@ -1,12 +1,14 @@
 ---
+import cn from 'mxcn';
 import type { CollectionEntry } from 'astro:content';
 
 interface Props {
 	project: CollectionEntry<'mmi' | 'myrole' | 'perso'>;
     index: number;
+	invert?: boolean;
 }
 
-const { index } = Astro.props as Props;
+const { index, invert } = Astro.props as Props;
 const { data, slug } = Astro.props.project;
 
 import Pill from './Pill.astro';
@@ -16,11 +18,11 @@ import Pill from './Pill.astro';
 		<div class="img hidden">
 			<img src={data.img} alt={data.img_alt || ''} loading="lazy" decoding="async" />
 		</div>
-		<div class="flex gap-8">
+		<div class={cn('flex gap-8', {'flex-row-reverse': invert})}>
             <span class="text-8xl font-['Sentient-Bold'] w-1/7">0{index}</span>
             <div class="vertical-line-child"></div>
             <div class="flex flex-col gap-4 h-full">
-                <h4 class="font-medium text-4xl">{data.title}</h4>
+                <h4 class={cn('font-medium text-4xl', {'text-right': invert})}>{data.title}</h4>
                 <ul class="flex flex-wrap gap-2 tags-list">
                     {data.support.map((s) => <li><Pill invert>{s}</Pill></li>)}
                 </ul>

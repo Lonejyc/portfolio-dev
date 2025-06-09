@@ -133,6 +133,16 @@ console.log('all projects', {
                     </ul>
                 </div>
             )}
+            {projectsMmi.length > 0 && (
+                <div class="flex flex-col gap-8 md:gap-16 px-4 md:px-8 py-16">
+                    <h3 class="text-right">Cours</h3>
+                    <ul class="flex flex-col">
+                        {projectsMmi.map((project, index) => (
+                            <ProjectPreview project={project} index={index + 4} invert />
+                        ))}
+                    </ul>
+                </div>
+            )}
         </SectionTitle>
     </main>
 </Layout>
