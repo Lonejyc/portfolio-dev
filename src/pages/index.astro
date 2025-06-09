@@ -84,19 +84,19 @@ console.log('all projects', {
                 </div>
                 <div class="grid grid-cols-2 items-center text-center gap-8 px-8 lg:px-16 xl:px-32">
                     <div class="flex flex-col gap-4">
-                        <span class="text-5xl font-['Sentient-Bold']">780</span>
+                        <span class="text-5xl font-['Sentient-Bold'] gsap-number" data-target="780">0</span>
                         <p class="px-4 lg:px-8">Projets de longs-métrages, séries et fictions TV</p>
                     </div>
                     <div class="flex flex-col gap-4">
-                        <span class="text-5xl font-['Sentient-Bold']">370</span>
+                        <span class="text-5xl font-['Sentient-Bold'] gsap-number" data-target="370">0</span>
                         <p class="px-4 lg:px-8">Société de production clientes</p>
                     </div>
                     <div class="flex flex-col gap-4">
-                        <span class="text-5xl font-['Sentient-Bold']">120 000</span>
+                        <span class="text-5xl font-['Sentient-Bold'] gsap-number" data-target="120000">0</span>
                         <p class="px-4 lg:px-8">Utilisateurs</p>
                     </div>
                     <div class="flex flex-col gap-4">
-                        <span class="text-5xl font-['Sentient-Bold']">400 000</span>
+                        <span class="text-5xl font-['Sentient-Bold'] gsap-number" data-target="400000">0</span>
                         <p class="px-4 lg:px-8">Fichiers de paie hébergés</p>
                     </div>
                 </div>
@@ -168,3 +168,30 @@ console.log('all projects', {
         flex-shrink: 0;
     }
 </style>
+
+<script>
+    import gsap from "gsap";
+    import { ScrollTrigger } from "gsap/ScrollTrigger";
+    gsap.registerPlugin(ScrollTrigger);
+
+    document.querySelectorAll('.gsap-number').forEach((el) => {
+        const target = parseInt(el.getAttribute('data-target'), 10);
+        gsap.fromTo(el, 
+            { innerText: 0 }, 
+            {
+                innerText: target,
+                duration: 1.5,
+                ease: "power1.out",
+                scrollTrigger: {
+                    trigger: el,
+                    start: "top 80%",
+                    once: true,
+                },
+                snap: { innerText: 1 },
+                onUpdate: function() {
+                    el.innerText = Math.floor(this.targets()[0].innerText).toLocaleString('fr-FR');
+                }
+            }
+        );
+    });
+</script>
