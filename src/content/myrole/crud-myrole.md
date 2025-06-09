@@ -1,15 +1,15 @@
 ---
-title: Formation client
+title: CRUD MyRole
 img: /assets/formation-client.webp
 img_alt: Image d'une formation client
 support:
-  - Communication
-  - Patiente
-  - Pédagogie
+  - Symfony
+  - API Platform
+  - Tailwind
 competencies:
-  - AC34.01
   - AC34.02
-  - AC34.03
+  - AC34.04
+  - AC34.05
 ---
 Dans le cadre de mon alternance, je devais dispenser des formations aux clients de MyRole. Je m'occupais de leurs expliquer comment le système fonctionne et comment l’utiliser. Le type de formation dépendait de la personne que j’avais en face de moi. 
 * Chargé de casting
