@@ -15,9 +15,11 @@ Dans le cadre de mon alternance, je devais dispenser des formations aux clients 
 * Chargé de casting
 * Secrétaire de production
 * Administrateur
+
 Je devais me préparer à l’avance pour être sûr de ne rien oublier durant la formation. Il fallait aussi envoyer en avance un lien vers une visio google meet pour faire la formation.
 J'ai créé une page Notion qui référence tout ce dont on a besoin pour faire une formation client.
 ![image de la page Notion](/assets/notion-formation-client.png)
+<br>
 Étape de la formation : 
 1. Préparation (envoie mail avec visio, se renseigner sur la boite de prod, ouverture diapo de près, …)
 2. Début visio (mettre à l’aise la personne et demander son niveau de connaissance sur MR, prévenir sur l’envoi des tutos à la fin, partager son écran et débuter la formation)
