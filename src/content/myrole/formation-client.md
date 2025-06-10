@@ -10,7 +10,7 @@ competencies:
   - AC35.01
   - AC35.04
 ---
-Dans le cadre de mon alternance, je devais dispenser des formations aux clients de MyRole. Je m'occupais de leurs expliquer comment le système fonctionne et comment l’utiliser. Le type de formation dépendait de la personne que j’avais en face de moi. 
+Dans le cadre de mon alternance, je devais dispenser des <strong>formations aux clients</strong> de MyRole. Je m'occupais de leurs expliquer comment le système fonctionne et comment l’utiliser. Le type de formation dépendait de la personne que j’avais en face de moi. 
 * Chargé de casting
 * Secrétaire de production
 * Administrateur

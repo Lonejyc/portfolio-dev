@@ -11,17 +11,19 @@ competencies:
   - AC34.04
   - AC34.05
 ---
-Dans le cadre de mon alternance, je devais dispenser des formations aux clients de MyRole. Je m'occupais de leurs expliquer comment le système fonctionne et comment l’utiliser. Le type de formation dépendait de la personne que j’avais en face de moi. 
-* Chargé de casting
-* Secrétaire de production
-* Administrateur
+## Quel était l'objectif ?
 
-Je devais me préparer à l’avance pour être sûr de ne rien oublier durant la formation. Il fallait aussi envoyer en avance un lien vers une visio google meet pour faire la formation.
-J'ai créé une page Notion qui référence tout ce dont on a besoin pour faire une formation client.
-![image de la page Notion](/assets/notion-formation-client.png)
-<br>
-Étape de la formation : 
-1. Préparation (envoie mail avec visio, se renseigner sur la boite de prod, ouverture diapo de près, …)
-2. Début visio (mettre à l’aise la personne et demander son niveau de connaissance sur MR, prévenir sur l’envoi des tutos à la fin, partager son écran et débuter la formation)
-3. Fin visio (répondre aux éventuelles questions, si pas la réponse alors demander a Christophe ou par mail)
-4. Post formation (envoi d’un mail avec les tutos, ajout de la date de formation dans un tableur)
+L'objectif de ce projet était d'avoir une première approche de <strong>Symfony</strong> et de <strong>API Platform</strong>.
+A la fin de ce projet, j'ai pu passer à travailler sur la V3 de MyRole qui est en cours de développement.
+
+Après avoir suivi le tuto de <strong>Grafikart</strong> sur Symfony, j'ai du recréer une mini version de MyRole.
+
+J'ai décidé de <strong>forker un github</strong> d'un <strong>Symfony Docker</strong> pour avoir déjà une base créer. J'ai aussi fait ce choix car je ne voulais pas avoir de problème de version car je travaillais sur mon pc portable et mon pc fixe.
+
+J'ai choisi d'utiliser <strong>TWIG</strong> au début pour me familiariser avec ce langage de code (que j'utilise aussi pour l'intégration de contrat) et j'ai ajouté Tailwind CSS pour avoir des pages un minimum stylisé rapidement.
+
+J'ai du suivre un schéma de base de données auquel j'ai réfléchi avant de me lancer dans la programmation. Je me suis basé sur les éléments qui nous étaient demandés. J'ai d'ailleurs utilisé <strong>postgres SQL</strong> comme base de données car c'est celle qui est utilisé dans la V3 de MyRole (version sur laquelle je travaille depuis la fin de ce projet).
+
+Après avoir fait toute la partie Symfony pur, j'ai fait une pause dans ce projet pour apprendre à utiliser API Platform. J'ai d'abord suivi le tuto de Grafikart sur API Platform puis j'ai fait quelques tests sur le projet que j'avais commencé en suivant le premier tuto. Ca m'a permis d'utiliser mon projet de test comme un playground pour bien découvrir l'usage d'API Platform.
+
+J'ai donc repris mon projet de mini MyRole et j'ai modifié toute la partie backend pour qu'elle fonctionne avec API Platform.
