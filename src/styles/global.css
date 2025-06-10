@@ -56,6 +56,20 @@ h1 {
   font-size: 6rem;
 }
 
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 3rem;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+}
+
 h2 {
   font-size: 3.75rem;
 }
@@ -93,41 +107,41 @@ body {
 }
 
 .prose {
-		color: inherit;
-	}
+	color: inherit;
+}
 	
-	.prose p {
-		margin-bottom: 1.5rem;
-		line-height: 1.8;
-	}
-	
-	.prose ul li {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 0.5em;
-    padding-inline-start: 0;
-    margin-bottom: 1em;
-  }
+.prose p {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}
 
-	.prose ul li::before {
-		content: '';
-		display: inline-block;
-		width: 28px;
-		height: 28px;
-		background-image: url('../assets/arrow-inverted.svg');
-		background-size: contain;
-		background-repeat: no-repeat;
-		background-position: center;
-		margin-right: 0.5rem;
-		flex-shrink: 0;
-	}
+.prose ul li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  padding-inline-start: 0;
+  margin-bottom: 1em;
+}
 
-  .prose ol {
-    list-style: decimal;
-    padding-left: 1.5rem;
-  }
-	
-	.prose strong {
-		font-weight: 600;
-	}
+.prose ul li::before {
+  content: '';
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  background-image: url('../assets/arrow-inverted.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 0.5rem;
+  flex-shrink: 0;
+}
+
+.prose ol {
+  list-style: decimal;
+  padding-left: 1.5rem;
+}
+
+.prose strong {
+  font-weight: 600;
+}

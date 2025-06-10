@@ -34,9 +34,9 @@ const projectsMyrole = (await getCollection('myrole')).slice(0, 3);
     <main>
         <SectionTitle title="Qui suis-je ?" id="about">
             <div class="flex flex-col p-4 md:p-8 gap-4 md:gap-8">
-                <div class="flex items-center gap-4">
+                <div class="flex flex-col md:flex-row items-center gap-4">
                     <img src={myPicture.src} alt="Photo de Jocelyn">
-                    <div class="flex flex-col gap-8">
+                    <div class="flex md:flex-col gap-8">
                         <ul>
                             <li>Jocelyn</li>
                             <li>20 ans</li>
@@ -67,40 +67,40 @@ const projectsMyrole = (await getCollection('myrole')).slice(0, 3);
         <SectionTitle title="Mon alternance" id="myrole" isReverse>
             <div class="flex flex-col gap-8 md:gap-16 px-4 md:px-8">
                 <div class="flex flex-col justify-between gap-8">
-                    <h3>L'entreprise</h3>
-                    <div class="flex justify-between items-center gap-4">
-                        <img src={MyRole.src} alt="Logo de MyRole" class="w-1/2 p-8">
+                    <h3 class="max-md:hidden">L'entreprise</h3>
+                    <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                        <img src={MyRole.src} alt="Logo de MyRole" class="md:w-1/2 p-4 pt-8 md:p-8">
                         <div class="vertical-line"></div>
-                        <p class="w-1/2 p-8">
+                        <p class="md:w-1/2 p-4 md:p-8">
                             Startup née en 2015 - automatise et accélère les tâches redondantes liées à la gestion administrative des acteurs sur les tournages de films
                         </p>
                     </div>
                 </div>
-                <div class="grid grid-cols-2 items-center text-center gap-8 px-8 lg:px-16 xl:px-32">
+                <div class="grid grid-cols-1 md:grid-cols-2 items-center text-center gap-8 px-8 lg:px-16 xl:px-32">
                     <div class="flex flex-col gap-4">
                         <span class="text-5xl font-['Sentient-Bold'] gsap-number" data-target="780">0</span>
-                        <p class="px-4 lg:px-8">Projets de longs-métrages, séries et fictions TV</p>
+                        <p class="md:px-4 lg:px-8">Projets de longs-métrages, séries et fictions TV</p>
                     </div>
                     <div class="flex flex-col gap-4">
                         <span class="text-5xl font-['Sentient-Bold'] gsap-number" data-target="370">0</span>
-                        <p class="px-4 lg:px-8">Société de production clientes</p>
+                        <p class="md:px-4 lg:px-8">Société de production clientes</p>
                     </div>
                     <div class="flex flex-col gap-4">
                         <span class="text-5xl font-['Sentient-Bold'] gsap-number" data-target="120000">0</span>
-                        <p class="px-4 lg:px-8">Utilisateurs</p>
+                        <p class="md:px-4 lg:px-8">Utilisateurs</p>
                     </div>
                     <div class="flex flex-col gap-4">
                         <span class="text-5xl font-['Sentient-Bold'] gsap-number" data-target="400000">0</span>
-                        <p class="px-4 lg:px-8">Fichiers de paie hébergés</p>
+                        <p class="md:px-4 lg:px-8">Fichiers de paie hébergés</p>
                     </div>
                 </div>
                 <div class="horizontal-line"></div>
                 <div class="flex flex-col gap-8">
-                    <div class="flex gap-8">
-                        <h3>Mon rôle</h3>
-                        <div class="flex gap-4 items-center">
+                    <div class="flex gap-8 max-md:flex-col">
+                        <h3 class="max-md:text-center">Mon rôle</h3>
+                        <div class="flex gap-4 items-center max-md:flex-col">
                             <Pill>18 novembre 2024</Pill>
-                            <img src={arrowInverted.src} alt="Flèche vers la droite" class="w-8 h-8">
+                            <img src={arrowInverted.src} alt="Flèche vers la droite" class="w-8 h-8 max-md:rotate-90">
                             <Pill>13 aout 2025</Pill>
                         </div>
                     </div>
@@ -119,7 +119,7 @@ const projectsMyrole = (await getCollection('myrole')).slice(0, 3);
         <SectionTitle title="Mes projets" id="projects">
             {projectsMyrole.length > 0 && (
                 <div class="flex flex-col gap-8 md:gap-16 px-4 md:px-8">
-                    <h3>Entreprise</h3>
+                    <h3 class="max-md:mt-6">Entreprise</h3>
                     <ul class="flex flex-col">
                         {projectsMyrole.map((project, index) => (
                             <ProjectPreview project={project} index={index + 1} />
