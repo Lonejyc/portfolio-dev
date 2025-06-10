@@ -14,25 +14,18 @@ import SectionTitle from '../components/SectionTitle.astro';
 import Pill from '../components/Pill.astro';
 import ProjectPreview from '../components/ProjectPreview.astro';
 
-const competencies: { label: string }[] = [
-	{ label: 'React' },
-	{ label: 'Next' },
-	{ label: 'Astro' },
-    { label: 'Tailwind' },
-    { label: 'Symfony' },
-    { label: 'Git' },
-    { label: 'Coolify' },
+const competencies = [
+    'React',
+    'Next',
+    'Astro',
+    'Tailwind',
+    'Symfony',
+    'Git',
+    'Coolify',
 ];
 
-const projectsMmi = (await getCollection('mmi')).slice(0, 3);
+const projectsMmi = (await getCollection('mmi')).slice(0, 2);
 const projectsMyrole = (await getCollection('myrole')).slice(0, 3);
-const projectPerso = (await getCollection('perso')).slice(0, 3);
-
-console.log('all projects', {
-    projectsMmi,
-    projectsMyrole,
-    projectPerso
-});
 ---
 <Layout>
     <Header/>
@@ -60,8 +53,8 @@ console.log('all projects', {
                 <div class="flex flex-col gap-8">
                     <h3>Compétences</h3>
                     <div class="flex flex-wrap gap-4 pr-8 lg:pr-42">
-                        {competencies.map(({ label }) => (
-                            <Pill>{label}</Pill>
+                        {competencies.map((competency) => (
+                            <Pill>{competency}</Pill>
                         ))}
                     </div>
                 </div>
@@ -107,7 +100,7 @@ console.log('all projects', {
                         <div class="flex gap-4 items-center">
                             <Pill>18 novembre 2024</Pill>
                             <img src={arrowInverted.src} alt="Flèche vers la droite" class="w-8 h-8">
-                            <Pill>18 novembre 2024</Pill>
+                            <Pill>13 aout 2025</Pill>
                         </div>
                     </div>
                     <ul class="arrow-list flex flex-col gap-4">

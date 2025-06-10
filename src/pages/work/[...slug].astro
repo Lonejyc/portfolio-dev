@@ -8,13 +8,12 @@ import Icon from '../../components/Icon.astro';
 import Pill from '../../components/Pill.astro';
 
 interface Props {
-	entry: CollectionEntry<'mmi' | 'myrole' | 'perso'>;
+	entry: CollectionEntry<'mmi' | 'myrole'>;
 }
 
 export async function getStaticPaths() {
 	const mmi = await getCollection('mmi');
 	const myrole = await getCollection('myrole');
-	const perso = await getCollection('perso');
 	return [
 		...mmi.map((entry) => ({
 			params: { slug: entry.slug },
@@ -23,11 +22,7 @@ export async function getStaticPaths() {
 		...myrole.map((entry) => ({
 			params: { slug: entry.slug },
 			props: { entry },
-		})),
-		...perso.map((entry) => ({
-			params: { slug: entry.slug },
-			props: { entry },
-		})),
+		}))
 	];
 }
 
