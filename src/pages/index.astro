@@ -9,6 +9,7 @@ import arrowInverted from '../assets/arrow-inverted.svg';
 
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 import Hero from '../components/Hero.astro';
 import SectionTitle from '../components/SectionTitle.astro';
 import Pill from '../components/Pill.astro';
@@ -138,6 +139,7 @@ const projectsMyrole = (await getCollection('myrole')).slice(0, 3);
             )}
         </SectionTitle>
     </main>
+    <Footer />
 </Layout>
 
 <style>
