@@ -1,7 +1,7 @@
 ---
 title: CRUD MyRole
-img: /assets/formation-client.webp
-img_alt: Image d'une formation client
+# img: /assets/formation-client.webp
+# img_alt: Image d'une formation client
 support:
   - Symfony
   - API Platform
@@ -27,3 +27,21 @@ J'ai du suivre un schéma de base de données auquel j'ai réfléchi avant de me
 Après avoir fait toute la partie Symfony pur, j'ai fait une pause dans ce projet pour apprendre à utiliser API Platform. J'ai d'abord suivi le tuto de Grafikart sur API Platform puis j'ai fait quelques tests sur le projet que j'avais commencé en suivant le premier tuto. Ca m'a permis d'utiliser mon projet de test comme un playground pour bien découvrir l'usage d'API Platform.
 
 J'ai donc repris mon projet de mini MyRole et j'ai modifié toute la partie backend pour qu'elle fonctionne avec API Platform.
+
+### Récap démarche
+
+* Suivi du tuto de Grafikart pour découvrir les bases de Symfony.
+* Fork d’un projet Symfony Docker pour avoir un environnement stable sur plusieurs machines.
+* Conception d’un schéma de base de données adapté aux besoins du projet.
+* Utilisation de Twig pour le templating et intégration de Tailwind pour un style rapide et propre.
+* Choix de PostgreSQL comme base de données pour rester cohérent avec la V3 de MyRole.
+* Mise en pause du projet pour apprendre API Platform via un second tutoriel de Grafikart.
+* Intégration d’API Platform dans le projet existant pour transformer le backend en API RESTful.
+
+### Résultat
+
+Images
+
+### Pistes d'améliorations
+
+* Rajouter un front-end en React pour avoir un vrai aperçu de la v3 de MyRole
