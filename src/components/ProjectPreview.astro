@@ -18,11 +18,11 @@ import Pill from './Pill.astro';
 		<div class="img hidden">
 			<img src={data.img} alt={data.img_alt || ''} loading="lazy" decoding="async" />
 		</div>
-		<div class={cn('flex gap-8', {'flex-row-reverse': invert})}>
+		<div class={cn("card-child flex gap-8 items-center min-h-28, {'flex-row-reverse': invert}")}>
             <span class="text-6xl md:text-8xl font-['Sentient-Bold'] md:w-1/7">0{index}</span>
             <div class="vertical-line-child"></div>
-            <div class="flex flex-col gap-4 h-full">
-                <h4 class={cn('font-medium text-2xl md:text-4xl', {'text-right': invert})}>{data.title}</h4>
+            <div class="flex flex-col gap-4 h-full justify-center">
+                <h4 class={cn('font-medium text-2xl md:text-4xl m-0', {'text-right': invert})}>{data.title}</h4>
                 <ul class="hidden md:flex flex-wrap gap-2 tags-list">
                     {data.support.map((s) => <li><Pill invert>{s}</Pill></li>)}
                 </ul>
@@ -31,24 +31,6 @@ import Pill from './Pill.astro';
 	</a>
 </li>
 
-<style>
-	.card .flex.gap-8 {
-		align-items: center;
-		min-height: 120px;
-	}
-	
-	.card .flex.flex-col.gap-4 {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		height: 100%;
-	}
-	
-	.card h4 {
-		margin: 0;
-	}
-</style>
-
 <script>
 	import { gsap } from 'gsap';
 	
@@ -56,7 +38,7 @@ import Pill from './Pill.astro';
 		document.querySelectorAll('.card').forEach((card) => {
 			const tagsList = card.querySelector('.tags-list');
 			const h4 = card.querySelector('h4');
-			const flexDiv = card.querySelector('.flex.gap-8');
+			const flexDiv = card.querySelector('.card-child');
 			const innerFlexDiv = card.querySelector('.flex.flex-col.gap-4');
 			
 			// État initial

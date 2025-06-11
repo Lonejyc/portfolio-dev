@@ -8,31 +8,7 @@ interface Props {
 const { invert } = Astro.props as Props;
 ---
 
-<span class={cn("pill px-4 py-2 w-fit rounded-full border border-black text-2xl font-['Poppins'] hover:text-white before:rounded-full before:bg-black", {
+<span class={cn("relative transition-all duration-500 overflow-hidden px-4 py-2 w-fit rounded-full border border-black text-2xl font-['Poppins'] hover:text-white before:rounded-full before:bg-black before:absolute before:top-0 before:left-0 before:h-full before:w-0 before:transition-all before:duration-500 before:-z-10 before:content-[''] before:block hover:before:w-full", {
     'bg-black text-white text-lg before:bg-white hover:bg-transparent hover:text-black': invert})}>
     <slot />
 </span>
-
-<style>
-  .pill::before {
-    content: '';
-    width: 0;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: .5s ease;
-    display: block;
-    z-index: -1;
-  }
-
-  .pill:hover::before {
-    width: 100%;
-  }
-
-  .pill {
-    position: relative;
-    transition: all .5s ease;
-    overflow: hidden;
-  }
-</style>
