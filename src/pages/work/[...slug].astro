@@ -32,7 +32,6 @@ const { Content } = await entry.render();
 
 <Layout>
 	<div class="projects relative min-h-screen">
-		<!-- Bouton retour fixe en haut -->
 		<div class="fixed top-8 left-8 z-10">
 			<a class="back-link flex items-center gap-2 text-sm hover:opacity-80 transition-opacity" href="/#projects">
 				<Icon icon="arrow-left" />
@@ -40,19 +39,14 @@ const { Content } = await entry.render();
 			</a>
 		</div>
 
-		<!-- Container principal avec grid -->
 		<div class="grid grid-cols-1 gap-0 min-h-screen">
-			
-			<!-- Contenu principal (scrollable) -->
 			<main class="px-8 lg:px-16 py-20 lg:py-24 overflow-y-auto">
 				<div class="max-w-3xl mx-auto">
-					<!-- Titre -->
 					<h1 class="text-5xl lg:text-6xl font-bold mb-12 lg:mb-16">
 						{entry.data.title}
 					</h1>
 					
-					<!-- Images si présentes -->
-					{entry.data.img && (
+					<!-- {entry.data.img && (
 						<div class="mt-12 mb-6">
 							<img 
 								src={entry.data.img} 
@@ -60,19 +54,16 @@ const { Content } = await entry.render();
 								class="w-full"
 							/>
 						</div>
-					)}
+					)} -->
 					
-					<!-- Contenu -->
 					<div class="prose prose-lg max-w-none">
 						<Content />
 					</div>
 				</div>
 			</main>
 
-			<!-- Sidebar fixe à droite -->
 			<aside class="hidden lg:block fixed right-0 top-0 max-w-[500px] w-auto h-full p-12 overflow-y-auto">
 				<div class="sticky top-0 flex flex-col gap-12">
-					<!-- Section Compétences -->
 					<div class="mb-12">
 						<h3 class="text-3xl font-bold mb-6">Ressources mobilisées</h3>
 						<div class="flex flex-wrap gap-3">
@@ -82,7 +73,6 @@ const { Content } = await entry.render();
 						</div>
 					</div>
 					<div class="horizontal-line"></div>
-					<!-- Section Apprentissage Critique -->
 					<div>
 						<h3 class="text-3xl font-bold mb-6">Apprentissage Critique</h3>
 						<div class="flex flex-wrap gap-3">
@@ -94,9 +84,7 @@ const { Content } = await entry.render();
 				</div>
 			</aside>
 
-			<!-- Version mobile de la sidebar (en bas du contenu) -->
 			<div class="lg:hidden px-8 py-12">
-				<!-- Section Compétences -->
 				<div class="mb-8">
 					<h3 class="text-2xl font-bold mb-4">Ressources mobilisées</h3>
 					<div class="flex flex-wrap gap-2">
@@ -105,8 +93,6 @@ const { Content } = await entry.render();
 						))}
 					</div>
 				</div>
-
-				<!-- Section Apprentissage Critique -->
 				<div>
 					<h3 class="text-2xl font-bold mb-4">Apprentissage Critique</h3>
 					<div class="flex flex-wrap gap-2">
