@@ -20,7 +20,8 @@ Je devais me préparer à l’avance pour être sûr de ne rien oublier durant l
 J'ai créé une page Notion qui référence tout ce dont on a besoin pour faire une formation client.
 ![image de la page Notion](/assets/notion-formation-client.png)
 <br>
-Étape de la formation : 
+
+### Étape de la formation : 
 1. Préparation (envoie mail avec visio, se renseigner sur la boite de prod, ouverture diapo de près, …)
 2. Début visio (mettre à l’aise la personne et demander son niveau de connaissance sur MR, prévenir sur l’envoi des tutos à la fin, partager son écran et débuter la formation)
 3. Fin visio (répondre aux éventuelles questions, si pas la réponse alors demander a Christophe ou par mail)

@@ -1,7 +1,7 @@
 ---
 title: CRUD MyRole
-# img: /assets/formation-client.webp
-# img_alt: Image d'une formation client
+img: /assets/users.webp
+img_alt: Screenshot de ma page utilisateurs du CRUD MyRole
 support:
   - Symfony
   - API Platform
@@ -28,6 +28,10 @@ Après avoir fait toute la partie Symfony pur, j'ai fait une pause dans ce proje
 
 J'ai donc repris mon projet de mini MyRole et j'ai modifié toute la partie backend pour qu'elle fonctionne avec API Platform.
 
+![Screenshot de mon code ApiResource](/assets/ApiResource.webp)
+
+<br>
+
 ### Récap démarche
 
 * Suivi du tuto de Grafikart pour découvrir les bases de Symfony.
@@ -37,10 +41,18 @@ J'ai donc repris mon projet de mini MyRole et j'ai modifié toute la partie back
 * Choix de PostgreSQL comme base de données pour rester cohérent avec la V3 de MyRole.
 * Mise en pause du projet pour apprendre API Platform via un second tutoriel de Grafikart.
 * Intégration d’API Platform dans le projet existant pour transformer le backend en API RESTful.
+<br>
 
 ### Résultat
 
-Images
+![Screenshot de ma page utilisateurs du CRUD MyRole](/assets/users.webp)
+
+![Screenshot de ma page utilisateurs du CRUD MyRole](/assets/users2.webp)
+
+![Screenshot de ma page création de films du CRUD MyRole](/assets/filmCreate.webp)
+
+![Screenshot de ma page films du CRUD MyRole](/assets/films.webp)
+<br>
 
 ### Pistes d'améliorations
 
