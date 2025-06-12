@@ -18,7 +18,7 @@ import Pill from './Pill.astro';
 		<div class="img hidden">
 			<img src={data.img} alt={data.img_alt || ''} loading="lazy" decoding="async" />
 		</div>
-		<div class={cn("card-child flex gap-8 items-center min-h-28, {'flex-row-reverse': invert}")}>
+		<div class={cn('card-child flex gap-8 items-center min-h-28', {'flex-row-reverse': invert})}>
             <span class="text-6xl md:text-8xl font-['Sentient-Bold'] md:w-1/7">0{index}</span>
             <div class="vertical-line-child"></div>
             <div class="flex flex-col gap-4 h-full justify-center">
