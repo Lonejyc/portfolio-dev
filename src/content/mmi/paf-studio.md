@@ -25,20 +25,20 @@ Pour répondre à ce besoin, nous avons conçu **Paf Studio**, un studio de dév
 ![Screenshot du logo de Paf studio](/assets/Paf-studio1.webp)
 _Logo de Paf Studio et infos_
 
-Nous avons commencé par analyser le marché et étudier la concurrence. 5 entreprises similaires sont ressortis (Adveris, Sweep, Immersive Garden, Unseen Studio, Active Theory). Nous avons analysé leurs structures, effectifs, et performances financières. Cette analyse nous a permis de comprendre le positionnement nécessaire et les besoins en investissement.
+<!-- Nous avons commencé par analyser le marché et étudier la concurrence. 5 entreprises similaires sont ressortis (Adveris, Sweep, Immersive Garden, Unseen Studio, Active Theory). Nous avons analysé leurs structures, effectifs, et performances financières. Cette analyse nous a permis de comprendre le positionnement nécessaire et les besoins en investissement.
 
 ![Screenshot des concurrents de Paf studio](/assets/Paf-studio3.webp)
 _Exemple des concurrents_
 
-Nous avons ensuite défini notre proposition de valeur unique : créer des sites web vitrines et e-commerce avec une intégration poussée de modèles 3D réalisés en interne, garantissant ainsi la qualité et la cohérence des projets.
+Nous avons ensuite défini notre proposition de valeur unique : créer des sites web vitrines et e-commerce avec une intégration poussée de modèles 3D réalisés en interne, garantissant ainsi la qualité et la cohérence des projets. -->
 
-C'est la que nous avons fait un point de mi parcours pour que chacun sache quel serait son rôle au seins de l'entreprise. C'est aussi la que nous avons décidé de l'apport de chacun à l'entreprise et donc des parts dans celle-ci.
+Nous avons fait un point de mi-parcours pour que chacun sache quel serait son rôle au seins de l'entreprise. C'est aussi la que nous avons décidé de l'apport de chacun à l'entreprise et donc des parts dans celle-ci.
 Nous avons défini la structure juridique (**SARL** pour la simplicité de gestion) et la répartition du capital entre les 4 associés, chacun ayant un rôle spécifique : Chef exécutif - Tom Boullay (28,6%), Lead Dev - Noah Heinrich (23,8%), Lead Créa - Julian Rodrigues (23,8%), et Directeur commercial - Jocelyn Marcilloux-Buisson (23,8%).
 
 ![Screenshot des parts de Paf studio](/assets/Paf-studio8.webp)
 _Exemple de la répartition des parts_
 
-Pour la partie financière, j'ai établi un plan d'investissement initial de 23 660€ comprenant le matériel informatique haute performance et l'espace de coworking. J'ai projeté un CA de 46 000€ la première année avec 5 projets au total.
+Pour la partie financière, je me suis chargé d'établir un plan d'investissement initial de 23 660€ comprenant le matériel informatique haute performance et l'espace de coworking. J'ai projeté un CA de 46 000€ la première année avec 5 projets au total.
 
 ![Screenshot de l'investissement initial de Paf studio](/assets/Paf-studio6.webp)
 _Exemple d'investissement initial_

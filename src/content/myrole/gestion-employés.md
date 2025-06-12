@@ -25,7 +25,7 @@ _Exemple de la dropzone de setSection_
 
 Je me suis ensuite occupé de la partie **API**. Il y avait déjà des points API utilisés dans la page mais ce n'était pas forcément les bons. J'ai donc essayé de penser la page à ma façon. A la base, je voulais faire un système qui transfère les données d'une DropZone à une autre. J'ai pas mal cherché comment transférer des données via la DropZone et un composant enfant, mais je n'ai rien trouvé. C'est là que j'ai pensé que je pouvais faire différents appels API. J'en aurais une DropZone qui contiendrait tous les employés et une autre qui aurait seulement les employés assignés au décor.
 
-J'ai donc utilisé les points d'API déjà existants et j'en ai modifié d'autres. Il y avait déjà un point d'API qui permettait d'avoir tous les employés d'un groupe d'employés. J'ai donc demandé à Amaury (développeur Back-end) de modifier ce point d'API pour rajouter un paramètre qui permette de choisir si l'employé est 'en attente' ou 'validé' par la production (c'était une condition pour pouvoir assigner un employé à un décor).
+J'ai donc utilisé les points d'API déjà existants et j'en ai modifié d'autres. Il y avait déjà un point d'API qui permettait d'avoir tous les employés d'un groupe d'employés. J'ai donc demandé à Amaury (développeur Back-end) de modifier ce point d'API pour rajouter un paramètre qui permette de choisir si la candidature de l'employé est 'en attente' ou 'validé' par la production (c'était une condition pour pouvoir assigner un employé à un décor).
 
 ![Screenshot de mon code React](/assets/allEmployee.webp)
 _Exemple de l'utilisation d'un point d'API_
