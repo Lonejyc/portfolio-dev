@@ -1,7 +1,7 @@
 ---
-title: Page gestion des employés
-img: /assets/formation-client.webp
-img_alt: Image d'une formation client
+title: Page gestion des employés sur un décors
+img: /assets/decorsGestion.webp
+img_alt: Image de la destion des décors
 support:
   - React
   - React Aria
@@ -9,17 +9,74 @@ support:
 competencies:
   - AC34.01
 ---
-Dans le cadre de mon alternance, je devais dispenser des formations aux clients de MyRole. Je m'occupais de leurs expliquer comment le système fonctionne et comment l’utiliser. Le type de formation dépendait de la personne que j’avais en face de moi. 
-* Chargé de casting
-* Secrétaire de production
-* Administrateur
+## Quel était l'objectif ?
 
-Je devais me préparer à l’avance pour être sûr de ne rien oublier durant la formation. Il fallait aussi envoyer en avance un lien vers une visio google meet pour faire la formation.
-J'ai créé une page Notion qui référence tout ce dont on a besoin pour faire une formation client.
-![image de la page Notion](/assets/notion-formation-client.png)
+Le but de cette tâche qui m'avait été donnée était de modifier le code existant pour faire fonctionner le système de Drag&Drop pour la gestion des employés sur un décor. Avant de modifier la page, il n'y avait que le drag des cards qui fonctionnait. 
+
+La condition qui m'avait été imposée par mon MAP était d'utiliser la librairie React Aria car c'est celle qu'on utilise de partout dans l'app et qu'elle permet de faire des composants accessibles et faciles d'utilisation.
+
+J'ai commencé par faire le système de drag avec React Aria. Je me suis beaucoup servi de la documentation de React Aria pour d'abord comprendre comment fonctionnait la librairie (c'était la première fois que je l'utilisais). J'ai fait un mini prototype pour faire en sorte que le système de drag & drop fonctionne bien. J'ai ensuite réutilisé le même système dans ma page de gestion des décors. 
+
+![Screenshot de mon code React](/assets/registrationDropZone.webp)
+_Exemple de la dropzone de registration_
+
+![Screenshot de mon code React](/assets/setSectionDrag&Drop.webp)
+_Exemple de la dropzone de setSection_
+
+Je me suis ensuite occupé de la partie API. Il y avait déjà des points API utilisés dans la page mais ce n'était pas forcément les bons. J'ai donc essayé de penser la page à ma façon. A la base, je voulais faire un système qui transfère les données d'une DropZone à une autre. J'ai pas mal cherché comment transférer des données via la DropZone et un composant enfant, mais je n'ai rien trouvé. C'est là que j'ai pensé que je pouvais faire différents appels API. J'en aurais une DropZone qui contiendrait tous les employés et une autre qui aurait seulement les employés assignés au décor.
+
+J'ai donc utilisé les points d'API déjà existants et j'en ai modifié d'autres. Il y avait déjà un point d'API qui permettait d'avoir tous les employés d'un groupe d'employés. J'ai donc demandé à Amaury (développeur Back-end) de modifier ce point d'API pour rajouter un paramètre qui permette de choisir si l'employé est 'en attente' ou 'validé' par la production (c'était une condition pour pouvoir assigner un employé à un décor).
+
+![Screenshot de mon code React](/assets/allEmployee.webp)
+_Exemple de l'utilisation d'un point d'API_
+
+J'ai ensuite créé un point d'API qui me permettait d'avoir seulement les employés assignés au décor. J'ai donc créé ce point d'API en front de zéro, mais la partie back-end, c'est Amaury qui s'en est occupé.
+
+![Screenshot de mon code React](/assets/setEmployee.webp)
+_Exemple de l'utilisation d'un point d'API_
+
+J'ai ensuite fait les fonctions de Drag & Drop (en suivant la doc React Aria).
+
+![Screenshot de mon code React](/assets/drag&drop.webp)
+_Exemple des fonctions de drag and drop_
+
+![Screenshot de mon code React](/assets/registration.webp)
+_Exemple de mon composant registration_
+
+![Screenshot de mon code React](/assets/setSection.webp)
+_Exemple de mon composant setSection_
+
+J'ai aussi fait des filtres pour le nombre de pages ou encore l'état de la candidature des employées.
+
+![Screenshot de mon code React](/assets/pageManagement.webp)
+_Exemple du filtre pour l'affichage des employés_
+
+![Screenshot de mon code React](/assets/registrationDrag&DropFunction.webp)
+_Exemple de la fonction pour définir les employés qui sont déjà assigné à un décors_
+
 <br>
-Étape de la formation : 
-1. Préparation (envoie mail avec visio, se renseigner sur la boite de prod, ouverture diapo de près, …)
-2. Début visio (mettre à l’aise la personne et demander son niveau de connaissance sur MR, prévenir sur l’envoi des tutos à la fin, partager son écran et débuter la formation)
-3. Fin visio (répondre aux éventuelles questions, si pas la réponse alors demander a Christophe ou par mail)
-4. Post formation (envoi d’un mail avec les tutos, ajout de la date de formation dans un tableur)
+
+### Récap démarche
+
+* Analyse du besoin et compréhension des contraintes (utilisation de React Aria pour l’accessibilité).
+* Prise en main de la librairie React Aria.
+* Intégration du système de drag & drop dans la page de gestion des décors.
+* Création et modification des points d’API existants.
+* Développement des fonctions de drag & drop.
+* Modification des composants pour la gestion des employés et des décors.
+* Mise en place de filtres pour améliorer l’affichage des employés.
+
+<br>
+
+### Résultat
+
+![GIF de ma page gestion des décors](/assets/dragNdrop.gif)
+
+![Screenshot de ma page gestion des décors](/assets/decorsGestion.webp)
+
+![Screenshot de ma page gestion des décors filtre](/assets/decorsFiltre.webp)
+<br>
+
+### Pistes d'améliorations
+
+* Unifier un peu plus le code.
