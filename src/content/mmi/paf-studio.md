@@ -1,7 +1,7 @@
 ---
 title: Paf Studio
-img: /assets/formation-client.webp
-img_alt: Image d'une formation client
+img: /assets/Paf-studio-logo.webp
+img_alt: Image du logo de Paf studio
 support:
   - Analyse
   - Communication
@@ -11,17 +11,68 @@ competencies:
   - AC35.03
   - AC35.04
 ---
-Dans le cadre de mon alternance, je devais dispenser des formations aux clients de MyRole. Je m'occupais de leurs expliquer comment le système fonctionne et comment l’utiliser. Le type de formation dépendait de la personne que j’avais en face de moi. 
-* Chargé de casting
-* Secrétaire de production
-* Administrateur
+## Quel était l'objectif ?
 
-Je devais me préparer à l’avance pour être sûr de ne rien oublier durant la formation. Il fallait aussi envoyer en avance un lien vers une visio google meet pour faire la formation.
-J'ai créé une page Notion qui référence tout ce dont on a besoin pour faire une formation client.
-![image de la page Notion](/assets/notion-formation-client.png)
+L'objectif de ce projet était de créer une <strong>entreprise innovante</strong> dans le secteur du web en général.
+Il fallait ensuite la présenter devant le TP et défendre notre idée de pourquoi elle était bien.
+
+Nous nous sommes d'abord posé pour étudier ensemble le marché pour savoir ou se positionner.
+Une fois ça fait, nous nous sommes répartis les tâches et nous nous sommes organisé un environnement de travail (discord, drive, canva, ...).
+
+Nous avons choisi de se positionner en tant qu'entreprise qui développe des <strong>sites web pour le luxe</strong>. Nous avons identifié une problématique majeure : les entreprises de "mécanique de luxe" (horlogerie, automobile haut de gamme) ne valorisent pas suffisamment leurs produits sur le web, alors que leur image de marque repose sur l'excellence et le prestige.
+Pour répondre à ce besoin, nous avons conçu <strong>Paf Studio</strong>, un studio de développement web spécialisé qui intègre des <strong>éléments de design 3D</strong> et de motion design pour offrir une expérience utilisateur immersive et sophistiquée, à la hauteur des standards de ces marques prestigieuses.
+
+![Screenshot du logo de Paf studio](/assets/Paf-studio1.webp)
+_Logo de Paf Studio et infos_
+
+Nous avons commencé par analyser le marché et étudier la concurrence. 5 entreprises similaires sont ressortis (Adveris, Sweep, Immersive Garden, Unseen Studio, Active Theory). Nous avons analysé leurs structures, effectifs, et performances financières. Cette analyse nous a permis de comprendre le positionnement nécessaire et les besoins en investissement.
+
+![Screenshot des concurrents de Paf studio](/assets/Paf-studio3.webp)
+_Exemple des concurrents_
+
+Nous avons ensuite défini notre proposition de valeur unique : créer des sites web vitrines et e-commerce avec une intégration poussée de modèles 3D réalisés en interne, garantissant ainsi la qualité et la cohérence des projets.
+
+C'est la que nous avons fait un point de mi parcours pour que chacun sache quel serait son rôle au seins de l'entreprise. C'est aussi la que nous avons décidé de l'apport de chacun à l'entreprise et donc des parts dans celle-ci.
+Nous avons défini la structure juridique (<strong>SARL</strong> pour la simplicité de gestion) et la répartition du capital entre les 4 associés, chacun ayant un rôle spécifique : Chef exécutif - Tom Boullay (28,6%), Lead Dev - Noah Heinrich (23,8%), Lead Créa - Julian Rodrigues (23,8%), et Directeur commercial - Jocelyn Marcilloux-Buisson (23,8%).
+
+![Screenshot des parts de Paf studio](/assets/Paf-studio8.webp)
+_Exemple de la répartition des parts_
+
+Pour la partie financière, j'ai établi un plan d'investissement initial de 23 660€ comprenant le matériel informatique haute performance et l'espace de coworking. J'ai projeté un CA de 46 000€ la première année avec 5 projets au total.
+
+![Screenshot de l'investissement initial de Paf studio](/assets/Paf-studio6.webp)
+_Exemple d'investissement initial_
+
+![Screenshot de la prévision de la première année de Paf studio](/assets/Paf-studio7.webp)
+_Exemple de la prévision de la première année_
+
+Nous avons finalement créé un planning en 2 phases.
+Une première en sous-traitance et une deuxième en indépendance
+
+![Screenshot du planning prévisonnel des 2 phases de Paf studio](/assets/Paf-studio4.webp)
+_Exemple du planning prévisonnel des 2 phases_
+
+![Screenshot du planning prévisonnel phase 2 de Paf studio](/assets/Paf-studio5.webp)
+_Exemple du planning prévisonnel phase 2_
+
+Enfin, nous avons défini une stratégie de communication basé sur un événement de lancement immersif.
+
 <br>
-Étape de la formation : 
-1. Préparation (envoie mail avec visio, se renseigner sur la boite de prod, ouverture diapo de près, …)
-2. Début visio (mettre à l’aise la personne et demander son niveau de connaissance sur MR, prévenir sur l’envoi des tutos à la fin, partager son écran et débuter la formation)
-3. Fin visio (répondre aux éventuelles questions, si pas la réponse alors demander a Christophe ou par mail)
-4. Post formation (envoi d’un mail avec les tutos, ajout de la date de formation dans un tableur)
+
+### Récap de la démarche
+
+* Identification du problème
+* Analyse du marché et de la concurrence
+* Définition de la proposition de valeur unique
+* Création du business model et des projections financières
+* Choix de la structure juridique et répartition du capital
+* Planification en deux phases
+* Stratégie de communication
+
+<br>
+
+### Pistes d'améliorations
+
+* Meilleure organisation au seins du groupe
+* Logo plus en corrélation avec notre image de marque
+* Gestion du temps

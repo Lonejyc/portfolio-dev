@@ -79,4 +79,4 @@ _Exemple de la fonction pour définir les employés qui sont déjà assigné à 
 
 ### Pistes d'améliorations
 
-* Unifier un peu plus le code.
+* Unifier un peu plus le code
