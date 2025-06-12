@@ -13,22 +13,22 @@ competencies:
 ---
 ## Quel était l'objectif ?
 
-L'objectif de ce projet était d'avoir une première approche de <strong>Symfony</strong> et de <strong>API Platform</strong>.
+L'objectif de ce projet était d'avoir une première approche de **Symfony** et de **API Platform**.
 A la fin de ce projet, j'ai pu passer à travailler sur la V3 de MyRole qui est en cours de développement.
 
-Après avoir suivi le tuto de <strong>Grafikart</strong> sur Symfony, j'ai du recréer une mini version de MyRole.
+Après avoir suivi le tuto de **Grafikart** sur Symfony, j'ai du recréer une mini version de MyRole.
 
-J'ai décidé de <strong>forker un github</strong> d'un <strong>Symfony Docker</strong> pour avoir déjà une base créer. J'ai aussi fait ce choix car je ne voulais pas avoir de problème de version car je travaillais sur mon pc portable et mon pc fixe.
+J'ai décidé de **forker un github** d'un **Symfony Docker** pour avoir déjà une base créer. J'ai aussi fait ce choix car je ne voulais pas avoir de problème de version car je travaillais sur mon pc portable et mon pc fixe.
 
 ![Screenshot de mon code register Symfony](/assets/register.webp)
 _Exemple d'un controller Symfony (ici pour l'inscription)_
 
-J'ai choisi d'utiliser <strong>TWIG</strong> au début pour me familiariser avec ce langage de code (que j'utilise aussi pour l'intégration de contrat) et j'ai ajouté Tailwind CSS pour avoir des pages un minimum stylisé rapidement.
+J'ai choisi d'utiliser **TWIG** au début pour me familiariser avec ce langage de code (que j'utilise aussi pour l'intégration de contrat) et j'ai ajouté Tailwind CSS pour avoir des pages un minimum stylisé rapidement.
 
 ![Screenshot de mon code register Twig](/assets/registerTwig.webp)
 _Exemple d'un template Twig (ici pour l'inscription)_
 
-J'ai du suivre un schéma de base de données auquel j'ai réfléchi avant de me lancer dans la programmation. Je me suis basé sur les éléments qui nous étaient demandés. J'ai d'ailleurs utilisé <strong>postgres SQL</strong> comme base de données car c'est celle qui est utilisé dans la V3 de MyRole (version sur laquelle je travaille depuis la fin de ce projet).
+J'ai du suivre un schéma de base de données auquel j'ai réfléchi avant de me lancer dans la programmation. Je me suis basé sur les éléments qui nous étaient demandés. J'ai d'ailleurs utilisé **postgres SQL** comme base de données car c'est celle qui est utilisé dans la V3 de MyRole (version sur laquelle je travaille depuis la fin de ce projet).
 
 Après avoir fait toute la partie Symfony pur, j'ai fait une pause dans ce projet pour apprendre à utiliser API Platform. J'ai d'abord suivi le tuto de Grafikart sur API Platform puis j'ai fait quelques tests sur le projet que j'avais commencé en suivant le premier tuto. Ca m'a permis d'utiliser mon projet de test comme un playground pour bien découvrir l'usage d'API Platform.
 

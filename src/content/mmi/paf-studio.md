@@ -13,14 +13,14 @@ competencies:
 ---
 ## Quel était l'objectif ?
 
-L'objectif de ce projet était de créer une <strong>entreprise innovante</strong> dans le secteur du web en général.
+L'objectif de ce projet était de créer une **entreprise innovante** dans le secteur du web en général.
 Il fallait ensuite la présenter devant le TP et défendre notre idée de pourquoi elle était bien.
 
 Nous nous sommes d'abord posé pour étudier ensemble le marché pour savoir ou se positionner.
 Une fois ça fait, nous nous sommes répartis les tâches et nous nous sommes organisé un environnement de travail (discord, drive, canva, ...).
 
-Nous avons choisi de se positionner en tant qu'entreprise qui développe des <strong>sites web pour le luxe</strong>. Nous avons identifié une problématique majeure : les entreprises de "mécanique de luxe" (horlogerie, automobile haut de gamme) ne valorisent pas suffisamment leurs produits sur le web, alors que leur image de marque repose sur l'excellence et le prestige.
-Pour répondre à ce besoin, nous avons conçu <strong>Paf Studio</strong>, un studio de développement web spécialisé qui intègre des <strong>éléments de design 3D</strong> et de motion design pour offrir une expérience utilisateur immersive et sophistiquée, à la hauteur des standards de ces marques prestigieuses.
+Nous avons choisi de se positionner en tant qu'entreprise qui développe des **sites web pour le luxe**. Nous avons identifié une problématique majeure : les entreprises de "mécanique de luxe" (horlogerie, automobile haut de gamme) ne valorisent pas suffisamment leurs produits sur le web, alors que leur image de marque repose sur l'excellence et le prestige.
+Pour répondre à ce besoin, nous avons conçu **Paf Studio**, un studio de développement web spécialisé qui intègre des **éléments de design 3D** et de motion design pour offrir une expérience utilisateur immersive et sophistiquée, à la hauteur des standards de ces marques prestigieuses.
 
 ![Screenshot du logo de Paf studio](/assets/Paf-studio1.webp)
 _Logo de Paf Studio et infos_
@@ -33,7 +33,7 @@ _Exemple des concurrents_
 Nous avons ensuite défini notre proposition de valeur unique : créer des sites web vitrines et e-commerce avec une intégration poussée de modèles 3D réalisés en interne, garantissant ainsi la qualité et la cohérence des projets.
 
 C'est la que nous avons fait un point de mi parcours pour que chacun sache quel serait son rôle au seins de l'entreprise. C'est aussi la que nous avons décidé de l'apport de chacun à l'entreprise et donc des parts dans celle-ci.
-Nous avons défini la structure juridique (<strong>SARL</strong> pour la simplicité de gestion) et la répartition du capital entre les 4 associés, chacun ayant un rôle spécifique : Chef exécutif - Tom Boullay (28,6%), Lead Dev - Noah Heinrich (23,8%), Lead Créa - Julian Rodrigues (23,8%), et Directeur commercial - Jocelyn Marcilloux-Buisson (23,8%).
+Nous avons défini la structure juridique (**SARL** pour la simplicité de gestion) et la répartition du capital entre les 4 associés, chacun ayant un rôle spécifique : Chef exécutif - Tom Boullay (28,6%), Lead Dev - Noah Heinrich (23,8%), Lead Créa - Julian Rodrigues (23,8%), et Directeur commercial - Jocelyn Marcilloux-Buisson (23,8%).
 
 ![Screenshot des parts de Paf studio](/assets/Paf-studio8.webp)
 _Exemple de la répartition des parts_
