@@ -38,7 +38,7 @@ Nous avons défini la structure juridique (**SARL** pour la simplicité de gesti
 ![Screenshot des parts de Paf studio](/assets/Paf-studio8.webp)
 _Exemple de la répartition des parts_
 
-Pour la partie financière, je me suis chargé d'établir un plan d'investissement initial de 23 660€ comprenant le matériel informatique haute performance et l'espace de coworking. J'ai projeté un CA de 46 000€ la première année avec 5 projets au total.
+Pour la partie financière, je me suis chargé d'établir un plan d'investissement initial de 23 660€ comprenant le matériel informatique. J'ai projeté un CA de 46 000€ la première année avec 5 projets au total.
 
 ![Screenshot de l'investissement initial de Paf studio](/assets/Paf-studio6.webp)
 _Exemple d'investissement initial_
